@@ -1,0 +1,125 @@
+.reserve {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 90%;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .rClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #003580;
+  }
+  
+  .rItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .rItemInfo {
+    flex: 1;
+  }
+  
+  .rTitle {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #003580;
+  }
+  
+  .rDesc {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .rMax {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .rPrice {
+    font-weight: 500;
+    color: #003580;
+  }
+  
+  .rSelectRooms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .room {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .room label {
+    font-size: 14px;
+  }
+  
+  .room input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  .room input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+  }
+  
+  .rButton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #003580;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+  }
+  
+  .rButton:hover {
+    background-color: #004bb1;
+  }
+  
+  .error {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .rError {
+    color: #e74c3c;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fdeaea;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+  }
+  

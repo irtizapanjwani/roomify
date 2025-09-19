@@ -1,0 +1,159 @@
+.hotelList {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.hotelListContainer {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.hotelListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotelListHeader h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.addHotelButton {
+  padding: 10px 20px;
+  background-color: #003580;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.addHotelButton:hover {
+  background-color: #004bb1;
+}
+
+.hotelListGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.hotelCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotelCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hotelImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.hotelInfo {
+  padding: 15px;
+}
+
+.hotelInfo h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.hotelInfo p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.hotelActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.editButton,
+.roomsButton,
+.deleteButton {
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  flex: 1;
+  transition: background-color 0.3s ease;
+}
+
+.editButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.roomsButton {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.editButton:hover {
+  background-color: #45a049;
+}
+
+.roomsButton:hover {
+  background-color: #1976D2;
+}
+
+.deleteButton:hover {
+  background-color: #da190b;
+}
+
+/* Loading and error states */
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hotelListContainer {
+    padding: 10px;
+    margin-top: 70px;
+  }
+
+  .hotelListHeader {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .hotelListGrid {
+    grid-template-columns: 1fr;
+  }
+} 

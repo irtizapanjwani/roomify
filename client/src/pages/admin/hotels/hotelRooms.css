@@ -1,0 +1,231 @@
+.hotelRooms {
+  display: flex;
+  min-height: 100vh;
+}
+
+.hotelRoomsContainer {
+  flex: 1;
+  padding: 24px;
+  background-color: #f8f9fa;
+  margin-top: 40px;
+}
+
+.hotelRoomsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hotelRoomsHeader h1 {
+  margin: 0;
+  color: #333;
+}
+
+.addRoomButton {
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.addRoomButton:hover {
+  background-color: #005c9e;
+}
+
+.roomsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.roomCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.roomInfo h3 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.roomDesc {
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.roomDetails {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.roomDetails span {
+  color: #333;
+  font-weight: 500;
+}
+
+.roomNumbers {
+  margin-top: 16px;
+}
+
+.roomNumbers h4 {
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.roomNumbersList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.roomNumberItem {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.roomNumberItem span {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.unavailableDates {
+  font-size: 13px;
+  color: #d32f2f;
+}
+
+.roomActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.editButton,
+.deleteButton {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.editButton {
+  background-color: #0071c2;
+  color: white;
+}
+
+.editButton:hover {
+  background-color: #005c9e;
+}
+
+.deleteButton {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.deleteButton:hover {
+  background-color: #ffcdd2;
+}
+
+.addRoomForm {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addRoomForm h2 {
+  margin: 0 0 24px 0;
+  color: #333;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.submitButton,
+.cancelButton {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submitButton {
+  background-color: #0071c2;
+  color: white;
+}
+
+.submitButton:hover {
+  background-color: #005c9e;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+  .hotelRoomsContainer {
+    padding: 16px;
+  }
+
+  .roomsList {
+    grid-template-columns: 1fr;
+  }
+
+  .roomNumbersList {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+} 

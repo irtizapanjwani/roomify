@@ -1,0 +1,120 @@
+.reservationList {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.reservationListContainer {
+  padding: 20px;
+  margin-top: 60px; /* Space for the admin nav */
+}
+
+.searchSection {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reservationListWrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.error {
+  color: red;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actionButtons button {
+  min-width: 80px;
+  margin: 2px 0;
+}
+
+.reservationDetails {
+  padding: 20px;
+}
+
+.detailRow {
+  margin-bottom: 20px;
+}
+
+.detailRow h3 {
+  color: #1976d2;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+
+.detailRow p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.MuiDataGrid-root {
+  background: white;
+  border: none !important;
+  border-radius: 8px;
+}
+
+.MuiDataGrid-cell {
+  white-space: normal !important;
+  line-height: 1.2 !important;
+  padding: 8px !important;
+}
+
+.reservationListContainer h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Admin layout specific styles */
+.adminLayout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.adminMain {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Make the layout responsive */
+@media screen and (max-width: 768px) {
+  .reservationListContainer {
+    padding: 10px;
+  }
+
+  .searchSection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .actionButtons button {
+    width: 100%;
+  }
+} 

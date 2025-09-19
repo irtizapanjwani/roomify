@@ -1,0 +1,98 @@
+.profileUpdate {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.pContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+.pClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.pClose:hover {
+  color: #003580;
+}
+
+.pTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #003580;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.pSubtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.pForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pFormGroup label {
+  font-size: 14px;
+  color: #333;
+}
+
+.pInput {
+  height: 35px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.pInput:focus {
+  border-color: #003580;
+}
+
+.pButton {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.pButton:hover {
+  background-color: #004bb1;
+}
+
+.pButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+} 

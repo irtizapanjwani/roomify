@@ -1,0 +1,234 @@
+.editRoomOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.editRoomModal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.editRoomHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.editRoomHeader h2 {
+  margin: 0;
+  color: #333;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.availabilityGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.roomAvailability {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.roomStatus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bookedStatus {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.availableStatus {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.clearDatesButton {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.clearDatesButton:hover {
+  background-color: #f57c00;
+}
+
+.dateCell {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dateCell.available {
+  background-color: #e8f5e9;
+  border-color: #81c784;
+}
+
+.dateCell.unavailable {
+  background-color: #ffebee;
+  border-color: #e57373;
+}
+
+.dateCell:hover {
+  transform: scale(1.05);
+}
+
+.dateNumber {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.monthName {
+  font-size: 12px;
+  color: #666;
+}
+
+.status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+
+.available .status {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.unavailable .status {
+  background-color: #ffcdd2;
+  color: #d32f2f;
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.submitButton,
+.cancelButton {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submitButton {
+  background-color: #0071c2;
+  color: white;
+}
+
+.submitButton:hover {
+  background-color: #005c9e;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+.error {
+  color: #d32f2f;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .editRoomModal {
+    padding: 16px;
+  }
+
+  .dateGrid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+} 
