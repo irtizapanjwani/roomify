@@ -5,10 +5,17 @@ const instance = axios.create({
   withCredentials: true
 });
 
-// Add a request interceptor to include credentials
+// Add a request interceptor to include credentials and auth token
 instance.interceptors.request.use(
   (config) => {
     config.withCredentials = true;
+    
+    // Add Authorization header if token exists
+    const token = localStorage.getItem('access_token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    
     return config;
   },
   (error) => {
@@ -24,7 +31,9 @@ instance.interceptors.response.use(
       // Handle specific error cases
       switch (error.response.status) {
         case 401:
-          // Handle unauthorized access
+          // Handle unauthorized access - clear tokens and redirect
+          localStorage.removeItem('access_token');
+          localStorage.removeItem('user');
           if (window.location.pathname !== '/login') {
             window.location.href = '/login';
           }

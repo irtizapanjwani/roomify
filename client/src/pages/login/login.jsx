@@ -35,14 +35,14 @@ const Login = () => {
 
       // Store auth data
       localStorage.setItem("access_token", userData.access_token);
-      
+
       // Remove access_token from user data before storing
       const { access_token, ...userDataWithoutToken } = userData;
       localStorage.setItem("user", JSON.stringify(userDataWithoutToken));
-      
+
       // Update context with the user data (without token)
       dispatch({ type: "LOGIN_SUCCESS", payload: userDataWithoutToken });
-      
+
       // Get the redirect path from state or default to home
       const redirectPath = location.state?.from || '/';
       navigate(redirectPath);
@@ -74,9 +74,9 @@ const Login = () => {
           className="lInput"
           autoComplete="current-password"
         />
-        <button 
-          disabled={loading} 
-          onClick={handleClick} 
+        <button
+          disabled={loading}
+          onClick={handleClick}
           className="lButton"
         >
           {loading ? "Logging in..." : "Login"}

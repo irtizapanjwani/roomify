@@ -62,9 +62,9 @@ export const login = async (req, res, next) => {
     // Set cookie and send response
     res
       .cookie("access_token", token, {
-        httpOnly: true,
+        httpOnly: false, // Allow frontend to access for cross-domain
         secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
+        sameSite: "none", // Required for cross-domain cookies
         maxAge: 24 * 60 * 60 * 1000 // 24 hours
       })
       .status(200)
