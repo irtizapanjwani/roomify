@@ -5,7 +5,7 @@ let io;
 export const setupSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:3000", // your frontend URL
+      origin: "https://roomify-theta-sable.vercel.app",
       methods: ["GET", "POST"],
     },
   });
