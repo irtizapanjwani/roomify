@@ -46,7 +46,9 @@ mongoose.connection.on("connected", () => {
 
 // middlewares
 app.use(cors({
-  origin: 'https://roomify-theta-sable.vercel.app',
+  origin: process.env.NODE_ENV === 'production' 
+    ? 'https://roomify-theta-sable.vercel.app' 
+    : 'http://localhost:3000',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
