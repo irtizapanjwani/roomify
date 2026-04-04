@@ -11,6 +11,7 @@ const Home = () => {
   console.log('this is the home page')
   return (
     <div>
+      
       <Navbar />
       <Header/>
       <div className="homeContainer">
